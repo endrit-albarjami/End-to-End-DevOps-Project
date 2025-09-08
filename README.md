@@ -59,3 +59,56 @@ The application used is a **Python Django app with MySQL**, containerized with D
 │ Route 53 DNS │───▶│ ACM (SSL)   │───▶│ AWS ALB       │
 └──────────────┘    └─────────────┘    └───────────────┘
 
+## 🛠️ Tech Stack
+
+### Infrastructure
+- Terraform (IaC)  
+- AWS (EKS, ECR, EFS, ALB, ACM, Route 53, S3)  
+
+### CI/CD & GitOps
+- Jenkins  
+- ArgoCD  
+- GitHub Actions  
+- Docker  
+
+### Monitoring & Observability
+- Prometheus  
+- Grafana  
+- AlertManager  
+
+### Application
+- Python Django  
+- MySQL  
+- Kubernetes (Deployments, StatefulSets, Ingress, ConfigMaps, Secrets)  
+
+---
+
+## 📋 Prerequisites
+
+- AWS Account with admin privileges  
+- Terraform `>= v1.0`  
+- Docker `>= 20.0`  
+- AWS CLI `>= v2.0`  
+- kubectl `>= v1.24`  
+- GitHub account with two repositories (App + GitOps)  
+- Domain name managed via Route 53 (recommended)  
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone repo
+git clone https://github.com/yourusername/aws-devops-project.git
+cd aws-devops-project
+
+# Configure AWS credentials
+aws configure
+
+# Create S3 bucket for Terraform backend
+aws s3 mb s3://terraform-devops-backend --region ap-southeast-1
+
+# Deploy infrastructure
+cd Terraform
+terraform init
+terraform apply -auto-approve
