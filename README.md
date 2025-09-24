@@ -1,4 +1,4 @@
-# End-to-End-DevOps-Project
+# End-to-End-DevOps-E-Commerce-Project
 
 # 🚀 End-to-End DevOps Project on AWS with GitOps, CI/CD & Monitoring
 
